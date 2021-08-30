@@ -15,18 +15,18 @@ class CustomEnchantIds
     /**
      * Weapons
      */
-    const AERIAL = 114;
-    const BACKSTAB = 122;
+    const AIRATTACK = 114;
+    const BACKDAMAGE = 122;
     const BLESSED = 120;
     const BLIND = 101;
-    const CHARGE = 113;
+    const CHARGEATTACK = 113;
     const CRIPPLE = 109;
-    const DEATHBRINGER = 102;
-    const DEEPWOUNDS = 112;
+    const DAMAGE = 102;
+    const BLEEDING = 112;
     const DISARMING = 117;
     const DISARMOR = 121;
     const GOOEY = 103;
-    const HALLUCINATION = 119;
+    const TITANTRAP = 119;
     //const HEADLESS = 116;
     //const ICEASPECT = 106;
     const LIFESTEAL = 100;
@@ -119,7 +119,7 @@ class CustomEnchantIds
     const FORCEFIELD = 418;
     const OVERLOAD = 419;
     const ARMORED = 420;
-    const TANK = 421;
+    const DEUTRONOMYTANK = 421;
     const HEAVY = 422;
     const SHIELDED = 423;
     const POISONOUSCLOUD = 424;
