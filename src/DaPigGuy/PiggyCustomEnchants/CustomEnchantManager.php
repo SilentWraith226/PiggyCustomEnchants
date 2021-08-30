@@ -111,13 +111,13 @@ class CustomEnchantManager
         self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::POISONED, "Poisoned", [Effect::POISON], [60], [1], CustomEnchant::RARITY_UNCOMMON));
         self::registerEnchantment(new AttackerDeterrentEnchant($plugin, CustomEnchantIds::REVULSION, "Revulsion", [Effect::NAUSEA], [20], [0], CustomEnchant::RARITY_UNCOMMON));
 
-        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::AERIAL, "Aerial", function (EntityDamageByEntityEvent $event) {
+        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::AIRATTACK, "Air Attack", function (EntityDamageByEntityEvent $event) {
             return $event->getDamager()->isOnGround();
         }, CustomEnchant::RARITY_COMMON));
-        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::BACKSTAB, "Backstab", function (EntityDamageByEntityEvent $event) {
+        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::BACKDAMAGE, "Back Damage", function (EntityDamageByEntityEvent $event) {
             return $event->getDamager()->getDirectionVector()->dot($event->getEntity()->getDirectionVector()) > 0;
         }, CustomEnchant::RARITY_UNCOMMON));
-        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::CHARGE, "Charge", function (EntityDamageByEntityEvent $event) {
+        self::registerEnchantment(new ConditionalDamageMultiplierEnchant($plugin, CustomEnchantIds::CHARGEATTACK, "Charge Attack", function (EntityDamageByEntityEvent $event) {
             return $event->getDamager()->isSprinting();
         }, CustomEnchant::RARITY_UNCOMMON));
 
@@ -151,8 +151,8 @@ class CustomEnchantManager
         self::registerEnchantment(new CactusEnchant($plugin, CustomEnchantIds::CACTUS));
         self::registerEnchantment(new ChickenEnchant($plugin, CustomEnchantIds::CHICKEN));
         self::registerEnchantment(new CloakingEnchant($plugin, CustomEnchantIds::CLOAKING));
-        self::registerEnchantment(new DeathbringerEnchant($plugin, CustomEnchantIds::DEATHBRINGER));
-        self::registerEnchantment(new DeepWoundsEnchant($plugin, CustomEnchantIds::DEEPWOUNDS));
+        self::registerEnchantment(new DeathbringerEnchant($plugin, CustomEnchantIds::DAMAGE));
+        self::registerEnchantment(new DeepWoundsEnchant($plugin, CustomEnchantIds::BLEEDING));
         self::registerEnchantment(new DisarmingEnchant($plugin, CustomEnchantIds::DISARMING));
         self::registerEnchantment(new DisarmorEnchant($plugin, CustomEnchantIds::DISARMOR));
         self::registerEnchantment(new DrillerEnchant($plugin, CustomEnchantIds::DRILLER));
@@ -201,7 +201,7 @@ class CustomEnchantManager
         self::registerEnchantment(new SoulboundEnchant($plugin, CustomEnchantIds::SOULBOUND));
         self::registerEnchantment(new SpiderEnchant($plugin, CustomEnchantIds::SPIDER));
         self::registerEnchantment(new StompEnchantment($plugin, CustomEnchantIds::STOMP));
-        self::registerEnchantment(new TankEnchant($plugin, CustomEnchantIds::TANK));
+        self::registerEnchantment(new TankEnchant($plugin, CustomEnchantIds::DEUTRONOMYTANK));
         self::registerEnchantment(new TelepathyEnchant($plugin, CustomEnchantIds::TELEPATHY));
         self::registerEnchantment(new VacuumEnchant($plugin, CustomEnchantIds::VACUUM));
         self::registerEnchantment(new VampireEnchant($plugin, CustomEnchantIds::VAMPIRE));
